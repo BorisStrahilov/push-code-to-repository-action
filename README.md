@@ -26,7 +26,7 @@ jobs:
       with:
         # The target repository to transfer the code to
         target_repo_url:
-          git@github.com:BorisStrahilov/deployTestCloud.git
+          git@<target-repo>.git
         # The private key of a user with ssh access to the other repo
         ssh_private_key:                                
           ${{ secrets.DIFFERENT_REPO_SSH_PRIVATE_KEY }}
