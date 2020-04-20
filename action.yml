@@ -1,16 +1,15 @@
 name: "Push to Repository"
 description: "Mirrors current repository to another repository."
 inputs:
-  ssh_private_key:
-    description: "SSH private key for ssh connection to the target repository"
-    required: false
-  target_repo_url:
-    description: "Target repository URL to push code to"
+  repository_url:
+    description: "URL to destination repository. Based on the following syntax: github.com/BorisStrahilov/myRepositoy"
     required: true
-  ssh_username:
-    description: "Username for ssh connection"
-    required: false
-    default: "git"
+  repository_username:
+    description: "Username used for authentication"
+    required: true
+  repository_password:
+    description: "Password used for authentication"
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
